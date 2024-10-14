@@ -36,7 +36,7 @@ public class MemberController {
         // System.out.println("Saved Entity member: " + savedMember.toString());
         log.info(savedMember.toString());
 
-        return "";
+        return "redirect:/members/" + savedMember.getId();
     }
 
     @GetMapping("/members/{id}")

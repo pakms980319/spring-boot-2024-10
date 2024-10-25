@@ -28,7 +28,7 @@ public class CoffeeApiConroller {
     }
 
     // POST
-    @PostMapping("/api/coffees/{id}")
+    @PostMapping("/api/coffees")
     public Coffee create(@RequestBody CoffeeForm dto) {
         Coffee coffee = dto.toEntity();
         return coffeeRepository.save(coffee);

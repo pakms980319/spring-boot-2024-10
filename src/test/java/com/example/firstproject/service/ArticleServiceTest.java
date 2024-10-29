@@ -141,7 +141,7 @@ class ArticleServiceTest {
     @Test
     @Transactional
     void delete_실패_존재하지_않는_id_입력() {
-        A// 1. 예상 데이터
+        // 1. 예상 데이터
         Long id = 4L;
         Article expected = null;
         // 2. 실제 데이터

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>셀프체크 17</title>
+</head>
+<body>
+    <h1>Hello, <span id="target">World</span>!</h1>
+    <input type="text" id="text-input">
+    <button id="send-btn">전송</button>
+    <script>
+        // 요소
+        const inputElement = document.querySelector("#text-input");
+        const buttonElement = document.querySelector("#send-btn");
+        // 클릭 이벤트
+        buttonElement.addEventListener("click", function() {
+            // input 값
+            const str = inputElement.value;
+            // input 값 비우기
+            inputElement.value = "";
+            // 문서에 반영
+            const targetElement = document.querySelector("#target");
+            targetElement.innerText = str;
+        });
+    </script>
+</body>
+</html>
